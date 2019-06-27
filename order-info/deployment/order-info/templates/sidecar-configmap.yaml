@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "order-info.fullname" . }}-sidecar-config
+  labels:
+    app.kubernetes.io/name: {{ include "order-info.name" . }}
+    helm.sh/chart: {{ include "order-info.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+data:
+  BROKER_HOST: {{ .Values.ace.sidecar.brokerHost }}
+  BROKER_PORT: {{ .Values.ace.sidecar.brokerPort | quote }}
+  REGISTRATION_HOST: {{ .Values.ace.sidecar.executiveHost }}
+  REGISTRATION_PORT: {{ .Values.ace.sidecar.executivePort | quote }}

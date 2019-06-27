@@ -1,0 +1,35 @@
+replicaCount: 1
+nameOverride: ""
+fullnameOverride: ""
+serviceName: 'order-quantity'
+serviceVersion: '0.0.1'
+serviceDescription: 'Count the number of orders in the array and add a new key'
+serviceType: 'NATIVE'
+serviceLogLevel: INFO
+image:
+  name: 'jcollins7227/order-quantity'
+  tag: '0.0.1'
+  pullPolicy: Always
+imageCredentials:
+  secretName: ""
+ace:
+  sidecar:
+    brokerHost: ace-runtime-services-kafka
+    brokerPort: 9092
+    executiveHost: ace-runtime-services-executive
+    executivePort: 9001
+  jaeger:
+    enabled: true
+    collector:
+      host: ace-jaeger-collector
+      port: 14267
+  image:
+    repository: axway-docker-public-registry.bintray.io/ace
+    tag: 0.0.8
+    pullPolicy: Always
+  imageCredentials:
+    secretName: ""
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}

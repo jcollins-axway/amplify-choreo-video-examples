@@ -1,0 +1,25 @@
+tenantId: "877498603337807"
+configServiceUrl: https://preprod.ace.axwaytest.net 
+ingress:
+  enabled: true
+  domain: lstmp0014.lab.phx.axway.int
+  tls:
+    enabled: true
+    secretName: amplify-choreo-runtime-tls-secret
+
+kafka:
+  replicas: 1
+  persistence:
+    storageClass: ace-runtime-storage-kafka-storage
+  zookeeper:
+    replicaCount: 1
+
+jaeger:
+  enabled: true
+  query:
+    basePath: /
+    service:
+      name: amplify-choreo-jaeger-query
+      queryPort: 80
+  collector:
+    host: amplify-choreo-jaeger-collector

@@ -1,0 +1,9 @@
+image:
+  name: 'jcollins7227/order-splitter'
+ace:
+  sidecar:
+    brokerHost: amplify-choreo-runtime-services-kafka
+    executiveHost: amplify-choreo-runtime-services-ace-runtime-services-executive
+  jaeger:
+    collector:
+      host: amplify-choreo-jaeger-collector

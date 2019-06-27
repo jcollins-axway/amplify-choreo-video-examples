@@ -1,4 +1,4 @@
-tenantId: "877498603337807"
+tenantId: "947615551495837"
 configServiceUrl: https://preprod.ace.axwaytest.net 
 ingress:
   enabled: true

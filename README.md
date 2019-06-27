@@ -36,13 +36,19 @@ amplify ace init
 ```
 
 ### Install Node Modules
+```
 npm install
+```
 
 ### Build the Business Service docker image and push to dockerhub
+```
 npm run build
 docker tag order-splitter:0.0.1 jcollins7227/order-splitter:0.0.1
 docker push jcollins7227/order-splitter:0.0.1
+```
 
 ### Deploy your Business Service to the Runtime
+```
 helm upgrade --devel --install --wait --namespace=amplify-choreo -f overrides.yaml order-splitter-0.0.1 ./deployment/order-splitter
+```
 

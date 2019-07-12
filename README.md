@@ -1,7 +1,7 @@
 # amplify-choreo-video-examples
 Here you will find all the commands and source used for the Amplify Choreograph Video
 
-### Amplify Choreography Documetation
+### Amplify Choreography Documentation
 You may find the steps for deploying the entire Runtime and installing the Command Line Tools here.
 
 https://docs.axway.com/bundle/ACE_00_DeveloperGuide_allOS_en_HTML5/page/Content/AxwayStartPage.htm
